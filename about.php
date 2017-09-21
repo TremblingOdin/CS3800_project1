@@ -5,7 +5,7 @@
         <meta charset="utf-8"> 
         <meta name="viewport" content="width=device-width, initial-scale=1"> 
         <meta name="description" content="brief description of the page"> 
-        <link rel="shortcut icon" href="images/favicon.jpg"> 
+        <link rel="shortcut icon" href="images/newfav.png"> 
         <link rel="stylesheet" href="css/normalize.css"> 
         <link rel="stylesheet" href="css/main.css">  
     </head>  
