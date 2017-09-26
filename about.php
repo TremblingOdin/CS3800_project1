@@ -11,9 +11,8 @@
     </head>  
     <body> 
         <div id="page2">
-            <?php
-            echo "<header><a href='index.php'><h1>Python 3</a></h1></header>";
-            ?>
+            
+            <?php include("includes/header.php"); ?>
 
 
             <main>
@@ -36,9 +35,7 @@
         </div>
 
 
-        <?php
-        echo "<footer> Benjamin Sawyers & Kayvan Ehteshami - CS3800 Project 1 - Fall 2017 </footer>";
-        ?>
+        <?php include("includes/footer.php"); ?>
     </body>
 
 </html> 
