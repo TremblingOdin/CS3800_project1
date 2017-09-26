@@ -19,15 +19,16 @@
                 <h2>About the Project</h2>
                 <section>
                     <ul>
-                        <li>Javascript: Completed by Ben</li>
-                        <li>HTML: Completed by Gage</li>
-                        <li>Information:
-                            <ul>
-                                <li>Questions 1-3: Completed by Gage</li>
-                                <li>Questions 4-5: Completed by Ben</li>
-                            </ul>
-                        </li>
-                        <li>Accordion: Completed by Ben</li>
+                        <li>Idea: handed down by the Kojima bloodline like a torch of passion to be pushed onto the world</li>
+                        <li>Video integration: Ben</li>
+                        <li>Footer: Ben</li>
+                        <li>Header: Joint Effort</li>
+                        <li>Home: Ben</li>
+                        <li>Easter Egg: Ben</li>
+                        <li>General Design: Kayvan</li>
+                        <li>About: Kayvan</li>
+                        <li>Sitting through MGS4's 4 hour cutscenes (not total, just one cutscene) to help write the History: Kayvan</li>
+                        <li>Quiz: Joint Effort</li>
                     </ul>
                 </section>
 
