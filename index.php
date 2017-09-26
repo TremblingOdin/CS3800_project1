@@ -1,9 +1,3 @@
-<!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
 <html>
     <head>
         <title> Project 1 </title> 
@@ -27,7 +21,7 @@ and open the template in the editor.
             </video>  
 
 
-            <a href="question1.html"><input type="button" id="begin" value="Begin Quiz"/></a>
+            <a href="easterEgg.php"><input type="button" id="begin" value="Go To Easter Egg (To Be Removed)"/></a>
 
 
         </main>
