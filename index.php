@@ -18,8 +18,20 @@
             
             <video width="480" height="240" autoplay muted="true">
                 <source src="images/mainVideo.mp4" type="video/mp4">
-            </video>  
-
+            </video> 
+            
+            <br>
+            <br>
+            
+            <?php
+                $file = fopen("aliases.txt", "r");
+                
+                while(!feof($file)){
+                    $printing = fgets($file);
+                    echo "$printing <br>";
+                }
+                fclose($file);
+            ?>
 
             <a href="easterEgg.php"><input type="button" id="begin" value="Go To Easter Egg (To Be Removed)"/></a>
 
