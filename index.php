@@ -13,16 +13,17 @@
         <?php include("includes/header.php"); ?>
         
         <main>
-            <h2>Creation</h2>
             
             
-            <video width="480" height="240" autoplay muted="true">
+            
+            <video width="480" height="240" autoplay loop muted="true">
                 <source src="images/mainVideo.mp4" type="video/mp4">
             </video> 
             
             <br>
             <br>
             
+            <h2>Aliases</h2>
             <?php
                 $file = fopen("aliases.txt", "r");
                 
@@ -33,8 +34,12 @@
                 fclose($file);
             ?>
 
-            <a href="easterEgg.php"><input type="button" id="begin" value="Go To Easter Egg (To Be Removed)"/></a>
 
+            <h3>Who Will Your True Hero Be!</h3>
+            <img src="images/redx.png" id="redx">
+            
+            <img src="images/revolverocelot.png" id="ocelot">
+            
 
         </main>
 
