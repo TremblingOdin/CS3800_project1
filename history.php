@@ -33,6 +33,17 @@ and open the template in the editor.
             $alias6 = fgets($file);
             $alias7 = fgets($file);
             
+            /**
+             * photos
+             * $photo1
+             * $photo2
+             * $photo3
+             * $photo4
+             * $photo5
+             * $photo6
+             */
+            
+            
             if(!feof($file)) {
                 $aliasUser = fgets($file);
                 $userAl = true;
@@ -44,6 +55,7 @@ and open the template in the editor.
 	In the August 1964, $name, now know as Major Ocelot, traveled to Rassvet, Tselinoyarsk with the Ocelot unit. For those who are unfamiliar Tselinoyarsk is a mountainous region at the south of the Former USSR, bordering much of Central Asia. Ocelot’s task was to capture a Nikolai Stepanovich Sokolov for the GRU, killing KGB operatives he knew in the process. At the same time the CIA sent in operatives to extract Nikolai and other defecting Rocket scientists. This is where Ocelot first meets Naked Snake, someone who would then turn out to be one of his greatest allies. After failing to kill Naked Snake, he’s told that he shoots as if he’s holding a revolver despite holding a Makarov Pistol.
 	After the conflict Ocelot airlifted the Shagohod prototype with Colonel Volgin. The Shagohod, designed by Nokolai, was a hybrid screw propelled vehicle that served as a mobile nuclear ballistic missile system. This is where Ocelot witnessed the launch of a nuclear warhead at Nikola’s resereach facility. This would later be dismissed as the act of terrorists lead by The Joy.
 	One week later Ocelot was ordered by the CIA to aid Naked Snake during Operation Snake Eater, including eliminating The Boss, the Cobra Unit, and Shagohod. The Cobra Unit, lead by The Joy/The Boss, consisted of The Pain, The End, The Fury, The Sorrow, and The Fear. While accomplishing this goal he was tasked to retrieve the Philosophers’ Legacy for the American branch of the Philosophers while also keeping it out of the hands of a Chinese spy posing as EVA.
+        
 EOT;
             ?>
             <p>INSERT CONVOLUDED PLOT SHIT HERE<p>
