@@ -14,6 +14,11 @@
     <body>
         <?php
             include("includes/header.php");
+            include("includes/functions.php");
+            
+            if(check_name()) {
+                remove_name();
+            }
             
             if(!isset($_POST['addition'])) {
                 $_SESSION['answers'] = 0;
