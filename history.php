@@ -22,15 +22,15 @@ and open the template in the editor.
             <?php
             $userAl = false;
 
-            $file = fopen("aliases.txt", "r");
-
-            $name = fgets($file);
-            $alias1 = fgets($file);
-            $alias2 = fgets($file);
-            $alias3 = fgets($file);
-            $alias4 = fgets($file);
-            $alias5 = fgets($file);
-            $alias6 = fgets($file);
+            $name = get_next();
+            $alias1 = get_next();
+            $alias2 = get_next();
+            $alias3 = get_next();
+            $alias4 = get_next();
+            $alias5 = get_next();
+            $alias6 = get_next();
+            
+            reset($_SESSION['aliases']);
             
             /**
              * photos
@@ -43,12 +43,11 @@ and open the template in the editor.
              */
             
 
-            if (!feof($file)) {
-                $aliasUser = fgets($file);
+            if (check_name()) {
+                $aliasUser = get_name();
                 $userAl = true;
             }
 
-            fclose($file);
                         
             echo "<p>Born as $name to The Joy and The Sorrow during the Allied "
                     . "invasion of Normandy, France June 6th, 1944. He was taken "

@@ -13,7 +13,7 @@
         <body>
             
             <img src="images/easterEgg.jpg">;
-            
+            <?php header("refresh:30;url=index.php"); ?>
         </body>
     </div>
 </html>

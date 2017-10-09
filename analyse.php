@@ -4,5 +4,7 @@
     
     write_name($_POST['ocelot']);
     
+    alias_create();
+    
     redirect($_POST['ocelot']);
 ?>

@@ -14,7 +14,6 @@
     <body>
         <?php
             include("includes/header.php");
-            include("includes/functions.php");
             
             if(check_name()) {
                 remove_name();

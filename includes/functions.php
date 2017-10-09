@@ -9,6 +9,10 @@
     }
     
     function write_name($string) {
+        if(check_name()) {
+            remove_name();
+        }
+        
         $handle = fopen('aliases.txt', 'a');
         
         fwrite($handle, $string);
@@ -51,6 +55,24 @@
         }
         fclose($redoing);
         fclose($input);
+    }
+    
+    function alias_create() {
+        if(check_name()) {
+            remove_name();
+        }
+        
+        $file = fopen('aliases.txt', 'r');
+        
+        unset($_SESSION['aliases']);
+        
+        $arry = array();
+        
+        while(!feof($file)) {
+             array_push($arry, fgets($file));
+        }
+        
+        $_SESSION['aliases'] = $arry;
     }
 ?>
 
