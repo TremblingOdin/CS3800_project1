@@ -15,6 +15,8 @@
         <?php 
             include("includes/header.php");
             
+            $_SESSION['count'] = 0;
+            
             if($_SESSION['answers'] < 4) {
                 $image = 'placeholder';
                 $result = 'Revolver Ocelot';
