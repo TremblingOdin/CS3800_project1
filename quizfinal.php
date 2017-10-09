@@ -17,29 +17,29 @@
             
             $_SESSION['count'] = 0;
             
-            if($_SESSION['answers'] < 4) {
-                $image = 'placeholder';
+            if($_SESSION['answers'] <= 4) {
+                $image = 'images/rocelotq.png';
                 $result = 'Revolver Ocelot';
                 $flavor = 'Russian gunslinger in Shadow Moses';
-            } else if($_SESSION['answers'] < 8) {
-                $image = 'placeholder';
+            } else if($_SESSION['answers'] <= 8) {
+                $image = 'images/socelotq.jpg';
                 $result = 'Shalashaska';
                 $flavor = 'man possessed by sins of his past';
-            } else if($_SESSION['answers'] < 12) {
-                $image = 'placeholder';
+            } else if($_SESSION['answers'] <= 12) {
+                $image = 'images/mocelotq.jpg';
                 $result = 'Major Ocelot';
                 $flavor = 'young man intent on saving the word'; 
-            } else if($_SESSION['answers'] < 16) {
-                $image = 'placeholder';
+            } else if($_SESSION['answers'] <= 16) {
+                $image = 'images/loceotq.jpg';
                 $result = 'Liquid Ocelot';
                 $flavor = 'man who saw Big Bosses dream through to the end';                  
             } else {
-                $image = 'placeholder';
+                $image = 'images/ocelotq.png';
                 $result = 'Ocelot';
                 $flavor = 'man who corrupted a martyr';                
             }
             
-            //echo "<image src='$image' alt='ocelot'>"
+            echo "<image src='$image' alt='ocelot'>";
             
             echo <<<EOT
             You remind me of $result the $flavor 
@@ -48,8 +48,10 @@ EOT;
             session_unset();
             
             echo "<br><br>What do you think he'd call himself next?<br>";
-            echo "<input type = 'text' name = 'ocelot'><br>";
+            echo "<form method='post' action='analyse.php'>";
+            echo "<input type='text' name='ocelot'><br>";
             echo "<input type='submit' value=\"You're pretty good\">";
+            echo "</form>";
             
             include("includes/footer.php");
         ?>

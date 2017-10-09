@@ -8,42 +8,42 @@ Fingers
 Giant Robot
 2
 
-What Type of Gun do you like?
-Revolver
+How do you feel about Snake?
+Who?
 1
-Markov
+Why does Mommy love him more than me?
 3
 Fingers
 4
-Giant Robot
+Makes my arm tingle
 2
 
-What Type of Gun do you like?
-Revolver
+Favorite dramatic pose?
+With my gun
 1
-Markov
+With three guns
 3
 Fingers
 4
-Giant Robot
+With my fist clenched like the guy I stole my arm from
 2
 
-What Type of Gun do you like?
-Revolver
+How many revolvers do you use?
 1
-Markov
+1
+3
 3
 Fingers
 4
-Giant Robot
+2
 2
 
-What Type of Gun do you like?
-Revolver
+Favorite body part?
+Right Arm
 1
-Markov
+Fingers
 3
 Fingers
 4
-Giant Robot
+Right Arm
 2
