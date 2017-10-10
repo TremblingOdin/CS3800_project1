@@ -27,7 +27,7 @@
                         <li>Easter Egg: Ben</li>
                         <li>General Design: Kayvan</li>
                         <li>About: Kayvan</li>
-                        <li>Sitting through MGS4's 4 hour cutscenes (not total, just one cutscene) to help write the History: Kayvan</li>
+                        <li>Sitting through MGS4's 4 hour cutscenes (not total, each cutscene) to help write the History: Kayvan</li>
                         <li>Quiz: Kayvan</li>
                         <li>Fixing last minute errors: Joint Effort</li>
                         <li>Styling: Ben</li>

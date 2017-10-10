@@ -15,44 +15,81 @@
         <?php 
             include("includes/header.php");
             
-            $_SESSION['count'] = 0;
-            
-            if($_SESSION['answers'] <= 4) {
-                $image = 'images/rocelotq.png';
-                $result = 'Revolver Ocelot';
-                $flavor = 'Russian gunslinger in Shadow Moses';
-            } else if($_SESSION['answers'] <= 8) {
-                $image = 'images/socelotq.jpg';
-                $result = 'Shalashaska';
-                $flavor = 'man possessed by sins of his past';
-            } else if($_SESSION['answers'] <= 12) {
-                $image = 'images/mocelotq.jpg';
-                $result = 'Major Ocelot';
-                $flavor = 'young man intent on saving the word'; 
-            } else if($_SESSION['answers'] <= 16) {
-                $image = 'images/locelotq.jpg';
-                $result = 'Liquid Ocelot';
-                $flavor = 'man who saw Big Bosses dream through to the end';                  
+            if(isset($_POST['ocelot'])) {
+                if(!empty($_POST['ocelot'])) {
+                    $ocelot = $_POST['ocelot'];
+                    preg_replace('/[^A-Za-z0-9\-]/', '', $ocelot);
+
+                    alias_create();
+
+                    array_push($_SESSION['aliases'], "\n" . $ocelot);
+
+                    write_array();
+
+                    redirect($ocelot);
+
+                    $image = 'otaconq.jpg';
+                    $result = 'otacon';
+                    $flavor = 'coward';
+                }
             } else {
-                $image = 'images/ocelotq.png';
-                $result = 'Ocelot';
-                $flavor = 'man who corrupted a martyr';                
+            
+                $_SESSION['count'] = 0;
+
+                //I half expect you to type the urls manually at which point an error would pop up without this if statement
+                if(isset($_SESSION['answers'])) {
+                    if($_SESSION['answers'] <= 4) {
+                        $image = 'images/rocelotq.png';
+                        $result = 'Revolver Ocelot';
+                        $flavor = 'Russian gunslinger in Shadow Moses';
+                    } else if($_SESSION['answers'] <= 8) {
+                        $image = 'images/socelotq.jpg';
+                        $result = 'Shalashaska';
+                        $flavor = 'man possessed by sins of his past';
+                    } else if($_SESSION['answers'] <= 12) {
+                        $image = 'images/mocelotq.jpg';
+                        $result = 'Major Ocelot';
+                        $flavor = 'young man intent on saving the word'; 
+                    } else if($_SESSION['answers'] <= 16) {
+                        $image = 'images/locelotq.jpg';
+                        $result = 'Liquid Ocelot';
+                        $flavor = 'man who saw Big Bosses dream through to the end';                  
+                    } else {
+                        $image = 'images/ocelotq.png';
+                        $result = 'Ocelot';
+                        $flavor = 'man who corrupted a martyr';                
+                    }
+                } else {
+                    $image = 'raidenq.jpg';
+                    $result = 'Raiden';
+                    $flavor = 'rat';
+                }
             }
             
             echo "<image src='$image' alt='ocelot'>";
-            
             echo <<<EOT
             You remind me of $result the $flavor 
 EOT;
             
             session_unset();
             
-            echo "<br><br>What do you think he'd call himself next?<br>";
-            echo "<form method='post' action='analyse.php'>";
-            echo "<input type='text' name='ocelot' value='Big Papi'><br>";
-            echo "<input type='submit' value=\"You're pretty good\">";
-            echo "</form>";
+            if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                $nameErr = "";
+                if (empty($_POST["name"])) {
+                    $nameErr = "Name is required";
+                }
+                
+                echo "$nameErr";
+            }
+        ?>   
+            <br><br>What do you think he'd call himself next?<br>
+            <form method='post' action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>">
+            <input type='text' name='ocelot'><br>
+            <input type='submit' value="You're pretty good">
+            </form>
             
+            
+        <?php
             include("includes/footer.php");
         ?>
     </body>
