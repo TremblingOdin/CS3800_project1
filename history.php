@@ -15,12 +15,12 @@ and open the template in the editor.
         <link rel="stylesheet" href="css/main.css">  
     </head>
     <body>
-        
+       
         <?php 
             session_start();
             include("includes/header.php"); 
         ?>
-        
+        <div id="page3"> 
         <main>
             <?php
             $userAl = false;
@@ -199,7 +199,8 @@ and open the template in the editor.
             }
             ?>
         </main>
-        
+        </div>
         <?php include("includes/footer.php"); ?>
+       
     </body>
 </html>

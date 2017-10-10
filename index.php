@@ -18,7 +18,7 @@
         ?>
         
         <main>
-            <h2>Conception</h2>
+            <h3>Conception</h3>
             
             
             <video width="480" height="240" autoplay muted="true">
@@ -28,7 +28,7 @@
             <br>
             <br>
             
-            <h2>Aliases</h2>
+            <h3>Aliases</h3>
             <?php
                 foreach ($_SESSION['aliases'] as $printing) {
                     echo "$printing<br>";

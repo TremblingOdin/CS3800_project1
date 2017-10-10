@@ -12,9 +12,9 @@
         <link rel="stylesheet" href="css/main.css">  
     </head>
     <body>
-        <?php 
-            include("includes/header.php");
-            
+        <?php include("includes/header.php"); ?>
+        <div id="page6">
+        <?php    
             if(isset($_POST['ocelot'])) {
                 if(!empty($_POST['ocelot'])) {
                     $ocelot = $_POST['ocelot'];
@@ -27,11 +27,10 @@
                     write_array();
 
                     redirect($ocelot);
-
-                    $image = 'otaconq.jpg';
-                    $result = 'otacon';
-                    $flavor = 'coward';
                 }
+                $image = 'images/otaconq.jpg';
+                $result = 'otacon';
+                $flavor = 'coward';
             } else {
             
                 $_SESSION['count'] = 0;
@@ -60,13 +59,13 @@
                         $flavor = 'man who corrupted a martyr';                
                     }
                 } else {
-                    $image = 'raidenq.jpg';
+                    $image = 'images/raidenq.jpg';
                     $result = 'Raiden';
                     $flavor = 'rat';
                 }
             }
             
-            echo "<image src='$image' alt='ocelot'>";
+            echo "<img src='$image' alt='ocelot' height='400' width='200' />";
             echo <<<EOT
             You remind me of $result the $flavor 
 EOT;
@@ -82,13 +81,15 @@ EOT;
                 echo "$nameErr";
             }
         ?>   
-            <br><br>What do you think he'd call himself next?<br>
+            <br><br>
+            <div id="title">What do you think he'd call himself next?
             <form method='post' action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>">
-            <input type='text' name='ocelot'><br>
-            <input type='submit' value="You're pretty good">
+            <input type='text' name='ocelot' id="namefill">
+            <input type='submit' value="You're pretty good" id="namebutton">
             </form>
+            </div>
             
-            
+        </div>
         <?php
             include("includes/footer.php");
         ?>

@@ -12,9 +12,10 @@
         <link rel="stylesheet" href="css/main.css">  
     </head>
     <body>
-        <?php
-            include("includes/header.php");
-            
+        <?php include("includes/header.php"); ?>
+        
+        <div id="page5">
+            <?php
             if(check_name()) {
                 remove_name();
             }
@@ -84,8 +85,8 @@
                 echo "<input type='submit' value='Submit'>";
                 echo "</form>";
             }
-            
-            include("includes/footer.php");
-        ?>
+            ?>
+        </div>
+        <?php include("includes/footer.php"); ?>
     </body>
 </html>
