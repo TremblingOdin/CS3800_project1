@@ -2,9 +2,12 @@
     include('includes/functions.php');
     session_start();
     
-    write_name($_POST['ocelot']);
+    $ocelot = $_POST['ocelot'];
+    preg_replace('/[^A-Za-z0-9\-]/', '', $ocelot);
+    
+    write_name($ocelot);
     
     alias_create();
     
-    redirect($_POST['ocelot']);
+    redirect($ocelot);
 ?>

@@ -30,7 +30,7 @@
                 $result = 'Major Ocelot';
                 $flavor = 'young man intent on saving the word'; 
             } else if($_SESSION['answers'] <= 16) {
-                $image = 'images/loceotq.jpg';
+                $image = 'images/locelotq.jpg';
                 $result = 'Liquid Ocelot';
                 $flavor = 'man who saw Big Bosses dream through to the end';                  
             } else {

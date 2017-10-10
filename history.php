@@ -16,21 +16,34 @@ and open the template in the editor.
     </head>
     <body>
         
-        <?php include("includes/header.php"); ?>
+        <?php 
+            session_start();
+            include("includes/header.php"); 
+        ?>
         
         <main>
             <?php
             $userAl = false;
 
-            $name = get_next();
-            $alias1 = get_next();
-            $alias2 = get_next();
-            $alias3 = get_next();
-            $alias4 = get_next();
-            $alias5 = get_next();
-            $alias6 = get_next();
+            alias_create();
             
-            reset($_SESSION['aliases']);
+            $arry = $_SESSION['aliases'];
+            
+            $index = 0;
+            
+            $name = $arry[$index];
+            $index++;
+            $alias1 = $arry[$index];
+            $index++;
+            $alias2 = $arry[$index];
+            $index++;
+            $alias3 = $arry[$index];
+            $index++;
+            $alias4 = $arry[$index];
+            $index++;
+            $alias5 = $arry[$index];
+            $index++;
+            $alias6 = $arry[$index];
             
             /**
              * photos

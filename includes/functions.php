@@ -62,6 +62,8 @@
             remove_name();
         }
         
+        if(!isset($_SESSION['aliases'])) {
+        
         $file = fopen('aliases.txt', 'r');
         
         unset($_SESSION['aliases']);
@@ -73,6 +75,7 @@
         }
         
         $_SESSION['aliases'] = $arry;
+        }
     }
 ?>
 
