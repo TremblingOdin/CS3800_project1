@@ -14,9 +14,7 @@
             session_start();
             include("includes/header.php");
             
-            if(!isset($_SESSION['aliases'])) {
-                alias_create();
-            }
+            alias_create();
         ?>
         
         <main>
