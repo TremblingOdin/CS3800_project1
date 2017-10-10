@@ -4,15 +4,15 @@
     
     $ocelot = $_POST['ocelot'];
     preg_replace('/[^A-Za-z0-9\-]/', '', $ocelot);
-    echo "$ocelot";
+    //echo "$ocelot";
     
     alias_create();
     
-    array_push($_SESSION['aliases'], $ocelot);
+    array_push($_SESSION['aliases'], "\n" . $ocelot);
     
     write_array();
     
-    print_r($_SESSION['aliases']);
+    //print_r($_SESSION['aliases']);
     
     redirect($ocelot);
 ?>
