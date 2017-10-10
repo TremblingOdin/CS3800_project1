@@ -1,8 +1,18 @@
 <?php
-    include('includes/including.php');
+    include('includes/functions.php');
     session_start();
     
-    write_name($_POST['ocelot']);
+    $ocelot = $_POST['ocelot'];
+    preg_replace('/[^A-Za-z0-9\-]/', '', $ocelot);
+    echo "$ocelot";
     
-    redirect($_POST['ocelot']);
+    alias_create();
+    
+    array_push($_SESSION['aliases'], $ocelot);
+    
+    write_array();
+    
+    print_r($_SESSION['aliases']);
+    
+    redirect($ocelot);
 ?>

@@ -10,7 +10,12 @@
     </head>
     <body>
         
-        <?php include("includes/header.php"); ?>
+        <?php
+            session_start();
+            include("includes/header.php");
+            
+            alias_create();
+        ?>
         
         <main>
             <h2>Conception</h2>
@@ -25,13 +30,9 @@
             
             <h2>Aliases</h2>
             <?php
-                $file = fopen("aliases.txt", "r");
-                
-                while(!feof($file)){
-                    $printing = fgets($file);
-                    echo "$printing <br>";
+                foreach ($_SESSION['aliases'] as $printing) {
+                    echo "$printing<br>";
                 }
-                fclose($file);
             ?>
 
             <!--<a href="easterEgg.php"><input type="button" id="begin" value="Go To Easter Egg (To Be Removed)"/></a>-->

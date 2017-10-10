@@ -15,10 +15,13 @@
         <?php
             include("includes/header.php");
             
+            if(check_name()) {
+                remove_name();
+            }
+            
             if(!isset($_POST['addition'])) {
                 $_SESSION['answers'] = 0;
             } else {
-                echo "{$_POST['addition']}";
                 $addr = (int)$_POST['addition'];
                 $_SESSION['answers'] += $addr;
             }
