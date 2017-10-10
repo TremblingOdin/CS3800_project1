@@ -49,7 +49,7 @@ EOT;
             
             echo "<br><br>What do you think he'd call himself next?<br>";
             echo "<form method='post' action='analyse.php'>";
-            echo "<input type='text' name='ocelot'><br>";
+            echo "<input type='text' name='ocelot' value='Big Papi'><br>";
             echo "<input type='submit' value=\"You're pretty good\">";
             echo "</form>";
             

@@ -63,27 +63,24 @@
             $count += 1;
             $v4 = $_SESSION['quiz'][$count +$adjust];
             
-
             if($_SESSION['count'] < 4) {
                 echo "<form action='quizquestions.php' method='post'>";
-                echo "<h2>$question</h2><br>";
-                echo "<input type='radio' value='$v1' name='addition'>$a1<br>";
+                echo "<h2>$question</h2>";
+                echo "<input type='radio' value='$v1' name='addition' checked='checked'>$a1<br>";
                 echo "<input type='radio' value='$v2' name='addition'>$a2<br>";
                 echo "<input type='radio' value='$v3' name='addition'>$a3<br>";
                 echo "<input type='radio' value='$v4' name='addition'>$a4<br>";
-
                 echo "<input type='submit' value='Submit'>";
                 echo "</form>";
                 
                 $_SESSION['count'] += 1;
             } else {
                 echo "<form action='quizfinal.php' method='post'>";
-                echo "<h2>$question</h2><br>";
-                echo "<input type='radio' value='$v1' name='addition'>$a1<br>";
+                echo "<h2>$question</h2>";
+                echo "<input type='radio' value='$v1' name='addition' checked='checked'>$a1<br>";
                 echo "<input type='radio' value='$v2' name='addition'>$a2<br>";
                 echo "<input type='radio' value='$v3' name='addition'>$a3<br>";
                 echo "<input type='radio' value='$v4' name='addition'>$a4<br>";
-
                 echo "<input type='submit' value='Submit'>";
                 echo "</form>";
             }
