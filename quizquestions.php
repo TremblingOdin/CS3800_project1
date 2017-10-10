@@ -15,6 +15,7 @@
         <?php include("includes/header.php"); ?>
         
         <div id="page5">
+            <main>
             <?php
             if(check_name()) {
                 remove_name();
@@ -86,6 +87,7 @@
                 echo "</form>";
             }
             ?>
+            </main>
         </div>
         <?php include("includes/footer.php"); ?>
     </body>
