@@ -12,48 +12,53 @@
         <link rel="stylesheet" href="css/main.css">  
     </head>
     <body>
-        <?php 
-            include("includes/header.php");
-            
-            $_SESSION['count'] = 0;
-            
-            if($_SESSION['answers'] <= 4) {
-                $image = 'images/rocelotq.png';
-                $result = 'Revolver Ocelot';
-                $flavor = 'Russian gunslinger in Shadow Moses';
-            } else if($_SESSION['answers'] <= 8) {
-                $image = 'images/socelotq.jpg';
-                $result = 'Shalashaska';
-                $flavor = 'man possessed by sins of his past';
-            } else if($_SESSION['answers'] <= 12) {
-                $image = 'images/mocelotq.jpg';
-                $result = 'Major Ocelot';
-                $flavor = 'young man intent on saving the word'; 
-            } else if($_SESSION['answers'] <= 16) {
-                $image = 'images/loceotq.jpg';
-                $result = 'Liquid Ocelot';
-                $flavor = 'man who saw Big Bosses dream through to the end';                  
-            } else {
-                $image = 'images/ocelotq.png';
-                $result = 'Ocelot';
-                $flavor = 'man who corrupted a martyr';                
-            }
-            
-            echo "<image src='$image' alt='ocelot'>";
-            
-            echo <<<EOT
-            You remind me of $result the $flavor 
+        <?php include("includes/header.php"); ?>
+
+        <div id="page5">
+            <main>
+                <?php
+                $_SESSION['count'] = 0;
+
+                if ($_SESSION['answers'] <= 4) {
+                    $image = 'images/rocelotq.png';
+                    $result = 'Revolver Ocelot';
+                    $flavor = 'Russian gunslinger in Shadow Moses';
+                } else if ($_SESSION['answers'] <= 8) {
+                    $image = 'images/socelotq.jpg';
+                    $result = 'Shalashaska';
+                    $flavor = 'man possessed by sins of his past';
+                } else if ($_SESSION['answers'] <= 12) {
+                    $image = 'images/mocelotq.jpg';
+                    $result = 'Major Ocelot';
+                    $flavor = 'young man intent on saving the word';
+                } else if ($_SESSION['answers'] <= 16) {
+                    $image = 'images/loceotq.jpg';
+                    $result = 'Liquid Ocelot';
+                    $flavor = 'man who saw Big Bosses dream through to the end';
+                } else {
+                    $image = 'images/ocelotq.png';
+                    $result = 'Ocelot';
+                    $flavor = 'man who corrupted a martyr';
+                }
+
+                echo <<<EOT
+            <p>You remind me of $result the $flavor</p> 
 EOT;
-            
-            session_unset();
-            
-            echo "<br><br>What do you think he'd call himself next?<br>";
-            echo "<form method='post' action='analyse.php'>";
-            echo "<input type='text' name='ocelot'><br>";
-            echo "<input type='submit' value=\"You're pretty good\">";
-            echo "</form>";
-            
-            include("includes/footer.php");
-        ?>
+
+                echo "<image src='$image' alt='ocelot'>";
+
+                session_unset();
+
+                echo "<h2>What do you think he'd call himself next?</h2>";
+                echo "<form method='post' action='analyse.php'>";
+                echo "<input type='text' name='ocelot'><br>";
+                echo "<br><input type='submit' value=\"You're pretty good\">";
+                echo "</form>";
+                ?>
+
+
+            </main>
+        </div>
+        <?php include("includes/footer.php"); ?>
     </body>
 </html>
